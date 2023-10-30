@@ -1,0 +1,37 @@
+//How to iterate object properties
+//Method 1 : Using for in loop
+//-->This loop is used to iterate over all non-Symbol iterable properties of an object. 
+//Some objects may contain properties that may be inherited from their prototypes. 
+//The hasOwnProperty() method can be used to check if the property belongs to the object itself. 
+
+for (let key in employee1) {
+    if (employee1.hasOwnProperty(key)) 
+    {
+        value = employee1[key];
+        console.log(key, value);
+    }
+}
+//Output :
+firstName Anuja
+lastName Mane
+age 24
+
+
+//Method 2 : Using Object.entries() method
+//Object.entries() method is used to return an array of the object’s own enumerable string-keyed property pairs. 
+//The returned array is used with the map() method to extract the key and value from the pairs
+Object.entries(employee1).map(entry => {
+    let key = entry[0];
+    let value = entry[1];
+    console.log(key, value);
+});
+
+
+//Method 3: Using forEach() method and object.keys() Method
+//Object.keys() returns an array of keys of the object and 
+//forEach() is an array method that allows you to iterate over each element in the array.
+Object.keys(employee1).forEach(key => {
+    const value = employee1[key];
+    //console.log(`${key}: ${value}`);
+    console.log(key,value);
+});
