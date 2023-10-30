@@ -1,0 +1,162 @@
+Push = add element at the end
+Pop = delete element from the end
+unshift = add element at the start
+Shift = delete element at the start
+Splice = start index  + no of element
+Slice = start + end
+Filter = returns elements satisfying conditions
+Map = apply condition on each element and return new array
+Reduce = return single result
+
+
+Use Cases :
+
+Shift()
+	- Queue processing:
+	In a first-in-first-out (FIFO) queue, shift() can be used to process items in the order they were added.
+	
+	- Data reorganization: 
+	If you need to reorganize data by removing and processing the first elements of arrays, shift() is an efficient tool.
+	- real-world example of data reorganization using the shift() method in JavaScript is 
+	: to sort an array of objects by a certain property. 
+	For example -
+	  suppose you have an array of products that have a name, a price, and a rating. You want to sort the products by their rating from highest to lowest. You can use the shift() method to remove the first product from the array, compare its rating with the other products, and insert it into a new array at the appropriate position. You can repeat this process until the original array is empty and the new array is sorted. 
+	
+Unshift()
+	- Building a Todo List app: 
+	You can use the unshift() method to add new tasks to the top of the list as they are created.
+	
+	- Creating a dynamic carousel: 
+	You can use the unshift() method to add new images to the front of the carousel as they are uploaded
+	(Note : A dynamic carousel is a web component that displays a series of content, such as images, text, or custom markup, in a sliding or rotating manner)
+	
+	- Implementing a stack data structure: 
+	You can use the unshift() method to push new elements to the top of the stack, which follows the last-in first-out (LIFO) principle.
+	
+	- Reversing an array: 
+	You can use the unshift() method to reverse an array by creating a new array and adding the elements from the original array in reverse order. 
+	
+Push()
+	- Building a chat app:
+           You can use the push() method to add new messages to the end of the chat history array. 
+
+	- Creating a shopping cart: 
+	You can use the push() method to add new items to the cart array as they are selected by the user.
+	
+	- Implementing a stack data structure: 
+	You can use the push() method to push new elements to the top of the stack, which follows the last-in first-out (LIFO) principle. 
+	
+	- Concatenating two arrays:
+	 You can use the push() method to append one array to another by using the spread operator (…).
+	fruits1.push(...fruits2);
+	
+Pop()
+	- Updating browser history: 
+	The pop() method can be used to update the browser history by removing the last visited page from an array and displaying it on the screen. For example, here’s how you can implement a back button using pop().
+	
+	- Implementing undo/redo functionality: 
+	The pop() method can be used to implement undo/redo functionality by using two arrays: one for storing the actions performed by the user and another for storing the actions undone by the user. 
+	
+Splice()
+	- To update a list of tasks with user input.
+	We will pass the index of task we want to update and replace the old one with new one
+	- Music player app
+	To remove a song from a playlist, use the splice() method to remove the index of the song from the playlist’s songs array. For example:
+	// Remove the second song from the first playlist
+	playlists[0].songs.splice(1, 1);
+
+Slice()
+	- To update the chat history :
+	use the slice() method to create a copy of the messages array before displaying it on the screen.
+	 For example:
+	// Create a copy of the messages array using slice()
+	const chatHistory = messages.slice();
+	
+	// Display the chat history on the screen
+	console.log(chatHistory);
+	
+	- To apply filters or sorting options to the cart items
+	 use the slice() method to create a copy of the cart array before modifying it. This way, the original cart array is not changed. 
+	For example:
+	// Create a copy of the cart array using slice()
+	const filteredCart = cart.slice();
+
+map()
+	- To create a new array of songs by applying a function that returns the song information  use the map() method on the playlist’s songs array and access the corresponding song objects from the songs array. For example:
+	// Create a new array of song information for the first playlist
+	const songInfo = playlists[0].songs.map(index => {
+	  let song = songs[index];
+	  return `${song.title} - ${song.artist} - ${song.album} - ${song.genre}`;
+	});
+	
+	- To apply filters or sorting options to the cart items
+	use the map() method to create a copy of the cart array before modifying it. This way, the original cart array is not changed.
+	// Create a copy of the cart array using map()
+	const filteredCart = cart.map(item => item);
+	
+	
+	
+Examples:
+
+
+push operation
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+let NewArray = OriginalArray.push(110)
+console.log(NewArray,OriginalArray)
+
+pop operation
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+let NewArray = OriginalArray.pop()
+console.log(NewArray,OriginalArray)
+
+shift operation
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+let NewArray = OriginalArray.shift()
+console.log(NewArray,OriginalArray)
+
+unshift operation
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+let NewArray = OriginalArray.unshift(8,9)
+console.log(NewArray,OriginalArray)
+
+splice operation
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+let NewArray = OriginalArray.splice(3,5)
+console.log(NewArray,OriginalArray)
+
+from operation
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+let NewArray = Array.from(OriginalArray, currentElement => currentElement * 2)
+console.log(NewArray,OriginalArray)
+
+slice operation
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+let NewArray = OriginalArray.slice(3,5)
+console.log(NewArray,OriginalArray)
+
+map operation
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+let NewArray = OriginalArray.map(num => num * 2)
+console.log(NewArray,OriginalArray)
+
+reduce operation
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+let result = OriginalArray.reduce((sum, currentElement) => { return sum + currentElement}, 0)
+console.log(result)
+
+some operation -- returns boolean
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+
+let isEven = (currentElement) => { return currentElement % 2 === 0}
+
+let result = OriginalArray.some(isEven)
+console.log(result)
+
+filter operation
+let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
+
+let isDivisible = (currentElement) => {return currentElement % 4  === 0}
+
+let NewArray = OriginalArray.filter(isDivisible)
+
+console.log(NewArray,OriginalArray)
