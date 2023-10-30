@@ -1,0 +1,40 @@
+//Map
+//A Map holds key-value pairs where the keys can be any datatype.
+//A Map remembers the original insertion order of the keys.
+//A Map has a property that represents the size of the map.
+
+// Create a Map
+const student = new Map([
+    ["Anuja", 21],
+    ["Smita", 22],
+    ["Gaurav", 23]
+  ]);
+
+// Set Map Values
+student.set("Gaurav", 500);
+
+//The get() method gets the value of a key in a Map:
+console.log(student.get("Gaurav")); 
+
+//The size property returns the number of elements in a Map:
+console.log(student.size);
+
+//The delete() method removes a Map element:
+student.delete("Anuja");
+
+//The clear() method removes all the elements from a Map:
+student.clear();
+
+//The has() method returns true if a key exists in a Map:
+student.has("Anuja");
+
+//The entries() method returns an iterator object with the [key,values] in a Map:
+
+// List all entries
+let text = "";
+for (const x of student.entries()) 
+{
+  text = text + x;
+}
+console.log(text);
+
