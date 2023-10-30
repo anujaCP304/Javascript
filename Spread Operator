@@ -1,0 +1,69 @@
+Spread Operator
+//create an object which has person object properties along with department
+//We will use spread operators for this
+const person2 = {
+    ...person,
+    deparment : "IT"
+}
+
+console.log(person2);
+
+// Define an object with some properties
+const person = {
+    name: "Anuja",
+    age: 20,
+    gender: "F",
+    address: {
+      city: "Bengaluru",
+      state: "Karnataka",
+    },
+  };
+  
+  // Use the spread syntax to create a shallow copy of the object
+  const newObj = { ...person };
+  
+  // Log the original and copied objects
+  console.log(person);
+  console.log(newObj);
+  
+  // Change the age property of the original object
+  person.age = 21;
+  
+  // Log the original and copied objects again
+  console.log(person);
+  console.log(newObj);
+  
+  // Change the city property of the nested object inside the original object
+  person.address.city = "Mumbai";
+  
+  // Log the original and copied objects again
+  console.log(person);
+  console.log(newObj);
+
+//Spread Operator
+//The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or 
+//object into another array or object.
+
+const Anuja1 = {
+    firstName: "Anuja",
+    lastName: "Mane",
+    age: 24
+}
+  
+const Anuja2 = {
+    gender : "female",
+    address : "Pune"
+}
+  
+  const myUpdatedDetails = {...Anuja1, ...Anuja2}
+
+  console.log(myUpdatedDetails);
+Output : 
+{
+  firstName: 'Anuja',
+  lastName: 'Mane',
+  age: 24,
+  gender: 'female',
+  address: 'Pune'
+}
+
