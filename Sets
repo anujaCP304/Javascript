@@ -1,0 +1,44 @@
+// Set -->The Set object lets you store unique values of any type, whether primitive values or object references.
+
+// Create a Set
+const letters = new Set();
+
+// Add Values to the Set
+letters.add("a");
+letters.add("b");
+letters.add("c");
+letters.add("c");
+letters.add("c");
+
+
+console.log(letters);
+
+//Output : Set(3) { 'a', 'b', 'c' }
+
+// List all entries
+let text = "";
+letters.forEach (function(value) {
+  text = text + value;
+})
+
+//The values() method returns an Iterator object containing all the values in a Set:
+letters.values();
+
+//using the Iterator object to access the elements
+const myIterator = letters.values();
+
+let txt = "";
+for(const val of myIterator)
+{
+    txt = txt + val;
+    console.log(txt)
+}
+
+//Returns an Iterator with the [value,value] pairs from a Set
+console.log(letters.entries());
+
+//Returns an Iterator with all the values in a Set
+console.log(letters.values());
+
+//Same as values()
+console.log(letters.keys());
