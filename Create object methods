@@ -1,0 +1,41 @@
+How to create Object
+
+Object
+An object is a way of organizing data and functionality in JavaScript. An object can have properties, which are variables or values that belong to the object, and methods, which are functions that can perform actions on the object or its data. For example, you can create an object that represents a person, with properties like name, age, and eye color, and methods like greeting, walking, or sleeping. You can use objects to model real-world entities or concepts, and to store and manipulate data in a structured way
+
+// Simple function 
+function vehicle(name,maker,engine)
+{ 
+    this.name = name; 
+    this.maker = maker; 
+    this.engine = engine; 
+} 
+
+// New keyword to create an object 
+let car  = new vehicle('GT','BMW','1998cc'); 
+
+// Property accessors 
+console.log(car.name); 
+console.log(car.maker); 
+console.log(car['engine']);
+
+Using object literals:
+
+Literals are smaller and simpler ways to define objects. We simply define the property and values inside curly braces as shown below: 
+
+
+// Creating js objects with object literal 
+let car = { 
+    name : 'GT', 
+    maker : 'BMW', 
+    engine : '1998cc'
+};
+
+// Property accessor 
+console.log(car.name); //dot notation 
+console.log(car['maker']); //bracket notation
+
+Output: 
+GT
+BMW
+
