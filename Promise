@@ -30,3 +30,22 @@ p.then((message) => {
 }).finally(() => {
     console.log("This will be always executed");
 })
+
+
+//setTimeout() method sets a timer which executes a function or specified piece of code once the timer expires.
+//Return value
+//The returned timeoutID is a positive integer value which identifies the timer created by the call to setTimeout(). 
+//This value can be passed to clearTimeout() to cancel the timeout.
+
+const p2 = new Promise((resolve, reject) => {
+    const value = setTimeout(() => {
+        console.log("Inside setTimeout");
+        resolve("Resolved");
+    }, 5000);
+
+    console.log("Timeout value : " + value);
+})
+
+p2.then((message) => {
+    console.log(message);
+})
