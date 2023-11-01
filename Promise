@@ -27,4 +27,6 @@ p.then((message) => {
     console.log("inside then " + message);
 }).catch((message) => {
     console.log("Inside catch " + message);
+}).finally(() => {
+    console.log("This will be always executed");
 })
