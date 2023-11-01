@@ -1,0 +1,30 @@
+//Promise
+//The Promise object represents the eventual completion (or failure) of an asynchronous operation and 
+//its resulting value.
+
+//Why we use promise:  to manage situations where you must wait for the outcome of an operation. 
+//For example, uploading files to the server and awaiting the response of an API call, 
+//or just asking the user to choose a file from their computer
+
+//A Promise is in one of these states:
+//pending: initial state, neither fulfilled nor rejected.
+//fulfilled: meaning that the operation was completed successfully.
+//rejected: meaning that the operation failed.
+
+const p = new Promise((resolve, reject) => {
+    let a = 1 + 2;
+    if(a == 2)
+    {
+        resolve("success");
+    }
+    else
+    {
+       reject("failed");
+    }
+})
+
+p.then((message) => {
+    console.log("inside then " + message);
+}).catch((message) => {
+    console.log("Inside catch " + message);
+})
