@@ -1,0 +1,33 @@
+//Template Literals use back-ticks (``) rather than the quotes ("") to define a string:
+
+const text = `Hello Catchpoint!`;
+
+//With template literals, we can use both single and double quotes inside a string:
+
+const text1 = `"She's working at the catchpoint"`;
+
+//Template literals allows multiline strings:
+
+const text2 =
+`JavaScript (JS) is a cross-platform, 
+object-oriented programming language 
+used by developers 
+to make web pages interactive`;
+
+//Template literals provide an easy way to interpolate variables and expressions into strings.
+//The method is called string interpolation.
+  
+// String Interpolation 
+function myInfo(fname, lname, country) 
+{ 
+    return `My name is ${fname} ${lname}. ${country} is my favorite country`;  
+} 
+console.log(myInfo("Anuja", "Mane", "India")); 
+
+//use conditional statements in expression
+  
+function isEven(x) 
+{ 
+    console.log(`x is ${x%2 === 0 ? 'even' : 'odd'}`); 
+} 
+isEven(4); // x is even
