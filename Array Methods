@@ -138,11 +138,34 @@ map operation
 let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
 let NewArray = OriginalArray.map(num => num * 2)
 console.log(NewArray,OriginalArray)
-
+---------------------------------------------------------------------------------------------------------
 reduce operation
 let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
 let result = OriginalArray.reduce((sum, currentElement) => { return sum + currentElement}, 0)
 console.log(result)
+
+//Another example
+// Define an array of numbers 
+const numbers = [1, 2, 3, 4, 5];
+
+// Define a reducer function that calculates the product of the accumulator and the current value 
+// and also logs the total, current value, index, and array 
+function product(total, currentValue, currentIndex, arr) 
+{ 
+    console.log("Total : ", total); 
+    console.log("Current value : ", currentValue); 
+    console.log("Index : ", currentIndex); 
+    console.log("Array : ", arr); 
+    return total + currentValue; 
+}
+
+// Call the reduce method on the array with the reducer function and an initial value of 1 
+const result = numbers.reduce(product, 0);
+
+// Log the result to the console 
+console.log(result); // 15
+
+-----------------------------------------------------------------------------------------------------------
 
 some operation -- returns boolean
 let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
@@ -151,7 +174,7 @@ let isEven = (currentElement) => { return currentElement % 2 === 0}
 
 let result = OriginalArray.some(isEven)
 console.log(result)
-
+-----------------------------------------------------------------------------------------------------------
 filter operation
 let OriginalArray = [10,20,30,40,50,60,70,80,90,100]
 
