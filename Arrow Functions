@@ -1,0 +1,23 @@
+//Arrow function
+
+//1
+
+const myFunction = (a, b) =>  a * b;
+console.log(myFunction(4,5));  //20
+
+//If the function has only one statement,
+//and the statement returns a value, you can remove the brackets and the return keyword:
+//This works only if the function has only one statement.
+const myFunction2 = () => "Hello Catchpoint";
+console.log(myFunction2());
+
+//We can pass parameters
+//if you have only one parameter, you can skip the parentheses as well
+const myFunction3 = (value) => "Welcome to the " + value;
+console.log(myFunction3("catchpoint"));
+
+
+const myFunction4 = (a, b, c) => {
+    return a + b + c;
+}
+console.log(myFunction4(10,20,30));
