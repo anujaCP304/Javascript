@@ -16,3 +16,18 @@ function sum(...theArgs)
   
   console.log(sum(10, 20, 30, 40));
   // output: 100
+
+
+//To assign the default values to the parameters
+function sum(a = 0, b = 0, ...theArgs)
+{
+    let total = a + b;
+
+    for(const arg of theArgs)
+    {
+        total = total + arg;
+    }
+    return total;
+}
+
+console.log(sum(5, 20, 15, 50));
